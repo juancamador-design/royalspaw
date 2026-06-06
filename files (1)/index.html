@@ -1,0 +1,946 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Royal Spaw Mobile Grooming | Georgetown TX</title>
+<meta name="description" content="Professional mobile dog grooming in Georgetown, Round Rock, Cedar Park & Austin TX.">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --n:#1a1a2e;--n2:#16213e;--n3:#0d1b2e;
+  --b:#1a5fa8;--b2:#2472c8;--blight:#e8f1fb;
+  --g:#c8a94a;--g2:#e8c86c;--gbg:#fdfbf0;
+  --cr:#faf8f3;--w:#fff;--tx:#2a2a2a;--mu:#6b6460;
+  --bd:#e8ddd0;--r:14px;--rs:8px;--rp:100px;
+  --fd:'Cormorant Garamond',Georgia,serif;
+  --fb:'DM Sans',system-ui,sans-serif;
+}
+html{scroll-behavior:smooth}
+body{font-family:var(--fb);color:var(--tx);background:var(--w);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* PAW DECORATIONS */
+.paw-bg{position:absolute;pointer-events:none;user-select:none;opacity:.07;font-size:clamp(40px,6vw,80px);z-index:0}
+.bone-bg{position:absolute;pointer-events:none;user-select:none;opacity:.06;font-size:clamp(30px,4vw,60px);z-index:0}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:200;transition:all .35s}
+.ni{display:flex;align-items:center;justify-content:space-between;padding:0 5%;height:70px}
+nav.scrolled{background:rgba(13,27,46,.97);backdrop-filter:blur(18px);box-shadow:0 2px 20px rgba(0,0,0,.2)}
+nav:not(.scrolled){background:linear-gradient(180deg,rgba(13,27,46,.7) 0%,transparent 100%)}
+.logo-w{display:flex;align-items:center;gap:10px;text-decoration:none}
+.logo-w img{width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--g);box-shadow:0 0 0 1px rgba(200,169,74,.3)}
+.logo-t{display:flex;flex-direction:column;line-height:1.1}
+.logo-m{font-family:var(--fd);font-size:19px;font-weight:600;color:var(--w);letter-spacing:.01em}
+.logo-s{font-size:8px;font-weight:500;color:var(--g2);letter-spacing:.15em;text-transform:uppercase;margin-top:2px}
+.nlinks{display:flex;align-items:center;gap:26px}
+.nlinks a{color:rgba(255,255,255,.75);text-decoration:none;font-size:13.5px;transition:color .2s}
+.nlinks a:hover{color:var(--g2)}
+.ncta{background:linear-gradient(135deg,var(--g),var(--g2));color:var(--n);padding:10px 22px;border-radius:var(--rp);font-size:13.5px;font-weight:500;text-decoration:none;transition:all .2s;white-space:nowrap;box-shadow:0 3px 12px rgba(200,169,74,.35)}
+.ncta:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(200,169,74,.45)}
+.ham{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+.ham span{display:block;width:22px;height:2px;background:var(--w);border-radius:2px;transition:all .3s}
+.mm{display:none;position:fixed;inset:0;z-index:190;background:var(--n3);flex-direction:column;align-items:center;justify-content:center;gap:30px}
+.mm.open{display:flex}
+.mm a{color:rgba(255,255,255,.85);font-family:var(--fd);font-size:30px;text-decoration:none;transition:color .2s}
+.mm a:hover{color:var(--g2)}
+.mm .mc{background:linear-gradient(135deg,var(--g),var(--g2));color:var(--n);padding:14px 44px;border-radius:var(--rp);font-family:var(--fb);font-size:16px;font-weight:500;text-decoration:none}
+.mx{position:absolute;top:22px;right:22px;color:var(--w);font-size:32px;cursor:pointer;background:none;border:none;padding:8px}
+
+/* HERO */
+.hero{min-height:100svh;position:relative;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden}
+.hero-bg{position:absolute;inset:0}
+.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(0deg,rgba(13,27,46,.95) 0%,rgba(13,27,46,.55) 50%,rgba(13,27,46,.15) 100%)}
+.hc{position:relative;z-index:2;padding:130px 6% 60px;max-width:680px}
+.hc>*{opacity:0;animation:fu .8s ease forwards}
+@keyframes fu{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+.hc>*:nth-child(1){animation-delay:.1s}.hc>*:nth-child(2){animation-delay:.25s}
+.hc>*:nth-child(3){animation-delay:.4s}.hc>*:nth-child(4){animation-delay:.55s}
+.hc>*:nth-child(5){animation-delay:.7s}.hc>*:nth-child(6){animation-delay:.85s}
+.h-eye{display:inline-flex;align-items:center;gap:7px;background:rgba(200,169,74,.18);border:1px solid rgba(200,169,74,.4);border-radius:var(--rp);padding:5px 15px;color:var(--g2);font-size:12px;font-weight:500;margin-bottom:20px;letter-spacing:.03em}
+.hero h1{font-family:var(--fd);font-size:clamp(42px,6.5vw,74px);font-weight:500;color:var(--w);line-height:1.08;margin-bottom:18px}
+.hero h1 em{font-style:italic;color:var(--g2)}
+.h-sub{color:rgba(255,255,255,.62);font-size:16px;font-weight:300;line-height:1.72;max-width:430px;margin-bottom:26px}
+.h-rate{display:flex;align-items:center;gap:10px;margin-bottom:26px}
+.stars{color:#f59e0b;font-size:17px;letter-spacing:2px}
+.h-rate p{color:rgba(255,255,255,.5);font-size:13px}.h-rate strong{color:var(--w)}
+.h-btns{display:flex;flex-wrap:wrap;gap:11px;margin-bottom:34px}
+.bg{background:linear-gradient(135deg,var(--g),var(--g2));color:var(--n);padding:14px 30px;border-radius:var(--rp);font-size:15px;font-weight:500;text-decoration:none;display:inline-flex;align-items:center;gap:8px;transition:all .2s;box-shadow:0 4px 20px rgba(200,169,74,.4)}
+.bg:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(200,169,74,.5)}
+.bw{border:1.5px solid rgba(255,255,255,.28);color:var(--w);padding:14px 28px;border-radius:var(--rp);font-size:15px;text-decoration:none;display:inline-flex;align-items:center;gap:7px;transition:all .2s}
+.bw:hover{border-color:var(--g2);background:rgba(200,169,74,.1)}
+.h-trust{display:flex;flex-wrap:wrap;gap:14px 22px}
+.tp{display:flex;align-items:center;gap:6px;color:rgba(255,255,255,.52);font-size:12px}
+.tp span:first-child{color:var(--g2)}
+
+/* PHOTO STRIP */
+.ps{display:grid;grid-template-columns:2fr 1fr 1fr;gap:3px}
+.psi{overflow:hidden;height:270px;position:relative;cursor:pointer}
+.psi img{width:100%;height:100%;object-fit:cover;object-position:center top;transition:transform .55s;display:block}
+.psi:hover img{transform:scale(1.05)}
+.psc{position:absolute;bottom:10px;left:10px;background:rgba(13,27,46,.82);backdrop-filter:blur(8px);color:var(--w);font-size:11px;padding:4px 11px;border-radius:6px;font-weight:500;border:1px solid rgba(200,169,74,.25)}
+
+/* PRICE BAR */
+.pb{background:var(--n);padding:0 5%;border-bottom:1px solid rgba(255,255,255,.06)}
+.pbi{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 0;flex-wrap:wrap}
+.pbl{color:rgba(255,255,255,.5);font-size:12.5px}.pbl strong{color:var(--g2)}
+.pbp{display:flex;gap:24px;flex-wrap:wrap}
+.pbit{text-align:center}
+.pbfr{color:rgba(255,255,255,.38);font-size:10px;text-transform:uppercase;letter-spacing:.07em}
+.pbv{font-family:var(--fd);font-size:22px;font-weight:500;color:var(--w)}
+.pbn{color:var(--g2);font-size:11px}
+.pbc{background:linear-gradient(135deg,var(--g),var(--g2));color:var(--n);padding:9px 18px;border-radius:var(--rp);font-size:13px;font-weight:500;text-decoration:none;white-space:nowrap;transition:all .2s}
+.pbc:hover{transform:translateY(-1px)}
+
+/* SECTIONS */
+.sec{padding:76px 5%;position:relative;overflow:hidden}
+.sl{font-size:11px;font-weight:500;color:var(--b2);letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
+.sl.gold{color:var(--g)}
+.st{font-family:var(--fd);font-size:clamp(28px,4vw,46px);font-weight:500;color:var(--n);line-height:1.15;margin-bottom:16px}
+.st.w{color:var(--w)}
+.ss{font-size:15.5px;color:var(--mu);line-height:1.72;max-width:500px}
+.sc{text-align:center}.sc .ss{margin:0 auto}
+.fi{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.fi.in{opacity:1;transform:none}
+
+/* STATS */
+.stb{background:linear-gradient(135deg,var(--n3),var(--n2));padding:48px 5%}
+.stg{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid rgba(255,255,255,.07);border-radius:var(--r);overflow:hidden;max-width:820px;margin:0 auto}
+.stx{padding:26px 16px;text-align:center;border-right:1px solid rgba(255,255,255,.07)}
+.stx:last-child{border-right:none}
+.stn{font-family:var(--fd);font-size:46px;font-weight:500;color:var(--g2);line-height:1}
+.stl{font-size:12px;color:rgba(255,255,255,.4);margin-top:5px;letter-spacing:.03em}
+
+/* ABOUT */
+.abg{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.abi{position:relative;border-radius:var(--r);overflow:hidden;box-shadow:0 20px 60px rgba(26,26,46,.15)}
+.abi img{width:100%;height:480px;object-fit:cover;object-position:center top;display:block}
+.abb{position:absolute;bottom:22px;left:22px;background:rgba(13,27,46,.88);backdrop-filter:blur(14px);border:1px solid rgba(200,169,74,.3);border-radius:var(--rs);padding:14px 18px}
+.abn{font-family:var(--fd);font-size:32px;font-weight:500;color:var(--g2);line-height:1}
+.abl{font-size:11px;color:rgba(255,255,255,.5);margin-top:3px}
+.abf{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:26px}
+.afi{display:flex;align-items:flex-start;gap:9px;background:var(--gbg);border:1px solid rgba(200,169,74,.2);border-radius:var(--rs);padding:13px}
+.afi-ic{font-size:18px;flex-shrink:0}
+.afi span{font-size:13px;color:var(--tx);line-height:1.5}
+
+/* REVIEWS CAROUSEL */
+.rv-sec{background:linear-gradient(135deg,var(--n3) 0%,var(--n2) 100%);padding:76px 5%;overflow:hidden;position:relative}
+.rv-stage{position:relative;height:320px;perspective:1000px;margin-top:44px}
+.rv-track{position:relative;height:100%;transform-style:preserve-3d}
+.rv-card{position:absolute;width:340px;background:rgba(255,255,255,.06);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.1);border-radius:var(--r);padding:26px;transition:all .55s cubic-bezier(.25,.46,.45,.94);cursor:pointer;top:50%;transform:translateY(-50%)}
+.rv-card::before{content:'\201C';font-family:var(--fd);font-size:64px;color:rgba(200,169,74,.25);position:absolute;top:4px;right:18px;line-height:1}
+.rv-st{color:#f59e0b;font-size:13px;margin-bottom:10px;letter-spacing:2px}
+.rv-tx{font-size:14px;color:rgba(255,255,255,.78);line-height:1.68;margin-bottom:18px;font-style:italic}
+.rv-au{display:flex;align-items:center;gap:10px}
+.rv-av{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;flex-shrink:0;border:2px solid rgba(200,169,74,.4)}
+.rv-nm{font-size:13px;font-weight:500;color:var(--w)}
+.rv-mt{font-size:11px;color:rgba(255,255,255,.4);display:flex;align-items:center;gap:4px;margin-top:2px}
+.gbg{width:12px;height:12px;background:#4285f4;border-radius:2px;display:inline-flex;align-items:center;justify-content:center;color:#fff;font-size:8px;font-weight:700;flex-shrink:0}
+.rv-nav{display:flex;justify-content:center;gap:12px;margin-top:32px}
+.rv-btn{width:40px;height:40px;border-radius:50%;border:1.5px solid rgba(200,169,74,.4);background:transparent;color:var(--g2);cursor:pointer;font-size:18px;display:flex;align-items:center;justify-content:center;transition:all .2s}
+.rv-btn:hover{background:rgba(200,169,74,.15);border-color:var(--g2)}
+.rv-dots{display:flex;gap:6px;align-items:center}
+.rv-dot{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.2);cursor:pointer;transition:all .3s}
+.rv-dot.a{background:var(--g2);transform:scale(1.3)}
+
+/* BEFORE/AFTER */
+.bas{background:var(--n3);padding:76px 5%;position:relative;overflow:hidden}
+.bag{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
+.bai{border-radius:var(--r);overflow:hidden;border:1px solid rgba(255,255,255,.07);transition:transform .3s;box-shadow:0 8px 30px rgba(0,0,0,.3)}
+.bai:hover{transform:translateY(-4px)}
+.basl{position:relative;height:290px;overflow:hidden;cursor:col-resize;user-select:none;touch-action:none}
+.baim{position:absolute;inset:0}
+.baim img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.bac{position:absolute;inset:0;overflow:hidden}
+.bac img{width:100%;height:100%;object-fit:cover;object-position:top;display:block}
+.bah{position:absolute;top:0;bottom:0;width:3px;background:var(--w);cursor:col-resize;transform:translateX(-50%);z-index:10}
+.bah::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:36px;height:36px;background:var(--w);border-radius:50%;box-shadow:0 2px 14px rgba(0,0,0,.4)}
+.bah::after{content:'⟨ ⟩';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:11px;color:var(--n);font-weight:700;white-space:nowrap}
+.bals{position:absolute;bottom:9px;left:9px;right:9px;display:flex;justify-content:space-between;z-index:5}
+.bpl{font-size:9px;font-weight:700;padding:3px 9px;border-radius:4px;letter-spacing:.07em;text-transform:uppercase}
+.bpb{background:rgba(26,26,46,.75);color:rgba(255,255,255,.8)}
+.bpa{background:linear-gradient(135deg,var(--g),var(--g2));color:var(--n)}
+.bainfo{padding:14px 16px;background:rgba(255,255,255,.03)}
+.badn{font-size:14px;font-weight:500;color:var(--w);display:flex;align-items:center;gap:6px}
+.badn::before{content:'🐾';font-size:13px}
+.badb{font-size:12px;color:rgba(255,255,255,.4);margin-top:2px}
+
+/* SERVICES */
+.svg{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:36px}
+.svc{border:1px solid var(--bd);border-radius:var(--r);overflow:hidden;transition:transform .25s,box-shadow .25s;background:var(--w)}
+.svc:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(26,26,46,.12)}
+.svci{height:210px;overflow:hidden;position:relative}
+.svci img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .5s;display:block}
+.svc:hover .svci img{transform:scale(1.05)}
+.svcb{position:absolute;top:11px;right:11px;background:linear-gradient(135deg,var(--g),var(--g2));color:var(--n);font-size:10px;font-weight:700;padding:3px 10px;border-radius:var(--rp);letter-spacing:.04em}
+.svbd{padding:22px}
+.svic{font-size:28px;margin-bottom:8px}
+.svnm{font-family:var(--fd);font-size:22px;font-weight:500;color:var(--n);margin-bottom:12px}
+.svft{list-style:none;margin-bottom:16px}
+.svft li{font-size:13px;color:var(--mu);padding:3.5px 0;display:flex;align-items:flex-start;gap:8px}
+.svft li::before{content:'✓';color:var(--b2);font-weight:700;flex-shrink:0}
+.svpr{border-top:1px solid var(--bd);padding-top:13px;display:flex;align-items:baseline;gap:5px}
+.svfr{font-size:12px;color:var(--mu)}.svpv{font-family:var(--fd);font-size:26px;font-weight:500;color:var(--n)}.svpe{font-size:12px;color:var(--mu)}
+
+/* HOW IT WORKS */
+.hw{background:var(--cr);position:relative;overflow:hidden}
+.hwr{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:48px;position:relative}
+.hwr::before{content:'';position:absolute;top:33px;left:12%;right:12%;height:1px;background:var(--bd);z-index:0}
+.stp{text-align:center;padding:0 16px;position:relative;z-index:1}
+.stpc{width:66px;height:66px;border-radius:50%;background:linear-gradient(135deg,var(--n),var(--n2));color:var(--g2);font-family:var(--fd);font-size:24px;font-weight:500;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;box-shadow:0 4px 16px rgba(26,26,46,.2)}
+.stpt{font-size:14.5px;font-weight:500;color:var(--n);margin-bottom:7px}
+.stpd{font-size:13px;color:var(--mu);line-height:1.58}
+.stpg{display:inline-block;background:var(--blight);border:1px solid rgba(26,95,168,.2);color:var(--b2);font-size:10px;font-weight:500;padding:3px 9px;border-radius:var(--rp);margin-top:7px;letter-spacing:.04em}
+
+/* BOOKING */
+.bks{padding:80px 5%;background:linear-gradient(135deg,var(--n3),var(--n2));position:relative;overflow:hidden}
+.bkc{background:var(--w);border-radius:var(--r);max-width:840px;margin:34px auto 0;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.35)}
+.bkh{background:linear-gradient(135deg,var(--n),var(--n2));padding:22px 28px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.bkht{font-family:var(--fd);font-size:21px;font-weight:500;color:var(--w);display:flex;align-items:center;gap:9px}
+.bkhs{font-size:12px;color:rgba(255,255,255,.5);margin-top:3px}
+.bkd{display:flex;gap:5px}
+.bkdt{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.2);transition:background .3s}
+.bkdt.a{background:var(--g2)}
+.bkbd{padding:30px}
+.bkst{display:none}.bkst.v{display:block}
+.fg{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.ff{display:flex;flex-direction:column;gap:5px}
+.ff label{font-size:11px;font-weight:500;color:var(--n);letter-spacing:.04em;text-transform:uppercase}
+.ff input,.ff select,.ff textarea{border:1.5px solid var(--bd);border-radius:var(--rs);padding:11px 13px;font-size:14px;font-family:var(--fb);color:var(--tx);background:var(--cr);transition:border-color .2s;width:100%}
+.ff input:focus,.ff select:focus,.ff textarea:focus{outline:none;border-color:var(--b2);background:var(--w)}
+.ff textarea{resize:vertical;min-height:62px}
+.ffl{grid-column:1/-1}
+.sth{font-family:var(--fd);font-size:19px;font-weight:500;color:var(--n);margin-bottom:18px;display:flex;align-items:center;gap:9px}
+.snb{width:27px;height:27px;border-radius:50%;background:linear-gradient(135deg,var(--g),var(--g2));color:var(--n);font-size:12px;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.rc{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-bottom:18px}
+.ro{border:2px solid var(--bd);border-radius:var(--r);padding:16px 14px;cursor:pointer;transition:all .2s;position:relative}
+.ro:hover,.ro.sel{border-color:var(--b2)}
+.ro.sel{background:var(--blight)}
+.ro input{position:absolute;opacity:0;width:0;height:0}
+.rot{font-weight:500;font-size:13px;color:var(--n);margin-bottom:3px}
+.rod{font-size:12px;color:var(--mu);line-height:1.45}
+.rob{display:inline-block;background:linear-gradient(135deg,var(--g),var(--g2));color:var(--n);font-size:10px;padding:2px 8px;border-radius:var(--rp);margin-top:6px;font-weight:600}
+.aog{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:18px}
+.aoi{display:flex;align-items:center;justify-content:space-between;border:1.5px solid var(--bd);border-radius:var(--rs);padding:10px 13px;cursor:pointer;transition:all .2s;gap:6px}
+.aoi:hover{border-color:var(--b2)}
+.aoi.sel{border-color:var(--b2);background:var(--blight)}
+.aoi input{position:absolute;opacity:0;pointer-events:none}
+.aon{font-size:13px;color:var(--tx)}
+.aop{font-size:12px;color:var(--b2);font-weight:500;white-space:nowrap}
+.prs{background:linear-gradient(135deg,var(--n),var(--n2));border-radius:var(--rs);padding:17px 20px;margin-top:14px}
+.prr{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:rgba(255,255,255,.55);padding:3.5px 0}
+.prr.tot{border-top:1px solid rgba(255,255,255,.1);margin-top:9px;padding-top:11px;color:var(--w);font-size:15px}
+.prr.tot .prv{font-family:var(--fd);font-size:22px;color:var(--g2)}
+.prn{font-size:11px;color:rgba(255,255,255,.3);margin-top:7px}
+.vxr{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+.vxi{display:flex;align-items:center;gap:7px;border:1.5px solid var(--bd);border-radius:var(--rs);padding:9px 10px;cursor:pointer;transition:all .2s;font-size:13px}
+.vxi:hover,.vxi.sel{border-color:var(--b2);background:var(--blight)}
+.vxi input{accent-color:var(--b2);width:14px;height:14px;flex-shrink:0}
+.wbx{background:var(--cr);border:1px solid var(--bd);border-radius:var(--rs);padding:14px;margin-top:14px;max-height:140px;overflow-y:auto}
+.wbx p{font-size:12px;color:var(--mu);line-height:1.7}
+.wck{display:flex;align-items:flex-start;gap:9px;margin-top:12px;cursor:pointer}
+.wck input{margin-top:3px;accent-color:var(--b2);width:16px;height:16px;flex-shrink:0}
+.wck span{font-size:13px;color:var(--tx);line-height:1.45}
+.bnv{display:flex;justify-content:space-between;align-items:center;margin-top:22px;padding-top:18px;border-top:1px solid var(--bd)}
+.bbk{color:var(--mu);font-size:14px;cursor:pointer;border:none;background:none;font-family:var(--fb);transition:color .2s}
+.bbk:hover{color:var(--n)}
+.bnx{background:linear-gradient(135deg,var(--n),var(--n2));color:var(--w);border:none;padding:12px 24px;border-radius:var(--rp);font-size:14px;font-weight:500;cursor:pointer;font-family:var(--fb);transition:all .2s;display:flex;align-items:center;gap:6px;box-shadow:0 3px 12px rgba(26,26,46,.25)}
+.bnx:hover{transform:translateY(-1px);box-shadow:0 6px 20px rgba(26,26,46,.35)}
+.bnx.gld{background:linear-gradient(135deg,var(--g),var(--g2));color:var(--n)}
+.cfb{text-align:center;padding:20px 0}
+.cfi{font-size:56px;margin-bottom:14px}
+.cft{font-family:var(--fd);font-size:28px;font-weight:500;color:var(--n);margin-bottom:9px}
+.cfs{color:var(--mu);font-size:14px;line-height:1.72}
+
+/* AREAS */
+.arg{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:30px}
+.arc{border:1px solid var(--bd);border-radius:var(--rs);padding:17px 13px;text-align:center;cursor:pointer;transition:all .2s;background:var(--w)}
+.arc:hover{border-color:var(--b2);background:var(--blight);transform:translateY(-3px);box-shadow:0 6px 20px rgba(26,95,168,.1)}
+.are{font-size:20px;margin-bottom:5px}
+.arn{font-size:14px;font-weight:500;color:var(--n);margin-bottom:1px}
+.ard{font-size:12px;color:var(--b2);font-weight:500}
+.arz{font-size:11px;color:var(--mu);margin-top:1px}
+
+/* FAQ */
+.fqs{background:var(--cr);position:relative;overflow:hidden}
+.fql{max-width:700px;margin:34px auto 0;display:flex;flex-direction:column;gap:8px}
+.fqi{background:var(--w);border:1px solid var(--bd);border-radius:var(--rs);overflow:hidden;transition:box-shadow .2s}
+.fqi.open{box-shadow:0 4px 16px rgba(26,26,46,.08)}
+.fqq{padding:17px 19px;font-size:14.5px;font-weight:500;color:var(--n);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:10px;user-select:none;transition:color .2s}
+.fqq:hover{color:var(--b2)}
+.fqq::after{content:'+';font-size:20px;color:var(--g);font-weight:300;transition:transform .3s;flex-shrink:0}
+.fqi.open .fqq::after{transform:rotate(45deg)}
+.fqa{max-height:0;overflow:hidden;transition:max-height .4s ease}
+.fqi.open .fqa{max-height:280px}
+.fqa p{padding:0 19px 16px;font-size:14px;color:var(--mu);line-height:1.72}
+
+/* CTA */
+.ctas{background:linear-gradient(135deg,var(--g) 0%,var(--g2) 100%);padding:76px 5%;text-align:center;position:relative;overflow:hidden}
+.ctas .st{color:var(--n)}.ctas .ss{color:rgba(26,26,46,.65);margin:10px auto 30px}
+.ctab{display:flex;flex-wrap:wrap;justify-content:center;gap:11px}
+.ctbn{background:var(--n);color:var(--w);padding:15px 34px;border-radius:var(--rp);font-size:15px;font-weight:500;text-decoration:none;transition:all .2s;box-shadow:0 4px 16px rgba(26,26,46,.25)}
+.ctbn:hover{background:var(--n2);transform:translateY(-2px)}
+.ctbo{border:2px solid rgba(26,26,46,.3);color:var(--n);padding:15px 34px;border-radius:var(--rp);font-size:15px;text-decoration:none;transition:all .2s}
+.ctbo:hover{border-color:var(--n);background:rgba(26,26,46,.07)}
+
+/* FOOTER */
+footer{background:var(--n3);padding:58px 5% 28px;position:relative;overflow:hidden}
+.ftop{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:38px;margin-bottom:46px}
+.fdsc{color:rgba(255,255,255,.42);font-size:13px;line-height:1.68;margin-top:14px;max-width:235px}
+.fc h4{color:rgba(255,255,255,.32);font-size:10px;font-weight:500;text-transform:uppercase;letter-spacing:.13em;margin-bottom:13px}
+.fc a{display:block;color:rgba(255,255,255,.55);font-size:13px;text-decoration:none;padding:3.5px 0;transition:color .2s}
+.fc a:hover{color:var(--g2)}
+.fbot{border-top:1px solid rgba(255,255,255,.07);padding-top:22px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.fbot p{color:rgba(255,255,255,.22);font-size:11px}
+.fbot a{color:rgba(255,255,255,.3);font-size:11px;text-decoration:none;transition:color .2s}
+.fbot a:hover{color:var(--g2)}
+
+/* MOBILE */
+@media(max-width:768px){
+  .nlinks{display:none}.ham{display:flex}
+  .ps{grid-template-columns:1fr}.psi:not(:first-child){display:none}.psi{height:210px}
+  .abg,.fg,.rc,.aog,.vxr{grid-template-columns:1fr}
+  .bag{grid-template-columns:1fr}.svg{grid-template-columns:1fr}
+  .rvg{grid-template-columns:1fr}
+  .hwr{grid-template-columns:1fr 1fr;gap:22px}.hwr::before{display:none}
+  .stg,.arg{grid-template-columns:repeat(2,1fr)}
+  .ftop{grid-template-columns:1fr 1fr}.ftop>:first-child{grid-column:1/-1}
+  .hero h1{font-size:38px}.bkbd{padding:18px}.bkh{padding:16px 20px}
+  .pbi{flex-direction:column;align-items:flex-start;gap:12px}
+  .h-btns{flex-direction:column}.abi img{height:300px}
+  .rv-stage{height:auto}.rv-card{position:relative;width:100%;top:auto;transform:none;left:auto!important}
+}
+@media(max-width:480px){
+  .stg{grid-template-columns:repeat(2,1fr)}
+  .abf{grid-template-columns:1fr}.ftop{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- ═══ MOBILE MENU ═══ -->
+<div class="mm" id="mm">
+  <button class="mx" onclick="closeMM()">✕</button>
+  <a href="#services" onclick="closeMM()">Services</a>
+  <a href="#booking" onclick="closeMM()">Pricing</a>
+  <a href="#reviews" onclick="closeMM()">Reviews</a>
+  <a href="#areas" onclick="closeMM()">Areas</a>
+  <a href="#booking" class="mc" onclick="closeMM()">Book Now 🐾</a>
+</div>
+
+<!-- ═══ NAV ═══ -->
+<nav id="mainNav">
+  <div class="ni">
+    <a href="#" class="logo-w">
+      <img src="img/logo.jpg" alt="Royal Spaw Mobile Grooming">
+      <div class="logo-t">
+        <span class="logo-m">Royal Spaw</span>
+        <span class="logo-s">Mobile Grooming</span>
+      </div>
+    </a>
+    <div class="nlinks">
+      <a href="#services">Services</a>
+      <a href="#booking">Pricing</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#areas">Areas</a>
+    </div>
+    <a href="#booking" class="ncta">🐾 Book Now</a>
+    <button class="ham" id="hamBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero">
+  <div class="paw-bg" style="top:12%;right:4%;font-size:90px;transform:rotate(15deg)">🐾</div>
+  <div class="paw-bg" style="top:35%;right:28%;font-size:50px;transform:rotate(-8deg)">🐾</div>
+  <div class="hero-bg"><img src="img/hero.jpg" alt="Alejandra with dog and Royal Spaw van" loading="eager"></div>
+  <div class="hero-ov"></div>
+  <div class="hc">
+    <div class="h-eye">📍 Georgetown · Round Rock · Cedar Park · Austin</div>
+    <h1>Mobile grooming<br>that comes to<br><em>your door</em></h1>
+    <p class="h-sub">Certified, insured groomers. A sanitized van at your driveway. No waiting rooms — just a calm, happy, beautiful dog.</p>
+    <div class="h-rate"><div class="stars">★★★★★</div><p><strong>4.9</strong> — 100+ Google reviews</p></div>
+    <div class="h-btns">
+      <a href="#booking" class="bg">📅 Book my appointment</a>
+      <a href="#pricing-anchor" class="bw">💲 See pricing</a>
+    </div>
+    <div class="h-trust">
+      <span class="tp"><span>🐾</span>Same-week slots</span>
+      <span class="tp"><span>🛡️</span>Licensed &amp; insured</span>
+      <span class="tp"><span>🌿</span>Pet-safe products</span>
+      <span class="tp"><span>📸</span>After-photo sent to you</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PHOTO STRIP ═══ -->
+<div class="ps">
+  <div class="psi"><img src="img/van_side.jpg" alt="Royal Spaw van with dogs" loading="lazy"><div class="psc">Our Royal Van 🐾</div></div>
+  <div class="psi"><img src="img/svc_full.jpg" alt="Groomed poodle inside van" loading="lazy"><div class="psc">Full Groom</div></div>
+  <div class="psi"><img src="img/svc_bath.jpg" alt="Happy doodle after bath" loading="lazy"><div class="psc">Bath &amp; Tidy</div></div>
+</div>
+
+<!-- ═══ PRICE BAR ═══ -->
+<div class="pb" id="pricing-anchor"><div class="pbi">
+  <div class="pbl">Starting prices — <strong>final quote confirmed at booking</strong> based on coat &amp; size</div>
+  <div class="pbp">
+    <div class="pbit"><div class="pbfr">from</div><div class="pbv">$75</div><div class="pbn">Bath &amp; Tidy</div></div>
+    <div class="pbit"><div class="pbfr">from</div><div class="pbv">$110</div><div class="pbn">Full Groom</div></div>
+    <div class="pbit"><div class="pbfr">from</div><div class="pbv">$55</div><div class="pbn">Puppy Intro</div></div>
+  </div>
+  <a href="#booking" class="pbc">Get exact quote →</a>
+</div></div>
+
+<!-- ═══ STATS ═══ -->
+<div class="stb"><div class="stg">
+  <div class="stx fi"><div class="stn">800+</div><div class="stl">🐕 dogs groomed</div></div>
+  <div class="stx fi"><div class="stn">4.9★</div><div class="stl">Google rating</div></div>
+  <div class="stx fi"><div class="stn">7+</div><div class="stl">years experience</div></div>
+  <div class="stx fi"><div class="stn">7</div><div class="stl">📍 cities served</div></div>
+</div></div>
+
+<!-- ═══ ABOUT ═══ -->
+<section class="sec fi">
+  <div class="paw-bg" style="bottom:10%;left:2%;transform:rotate(-15deg)">🐾</div>
+  <div class="bone-bg" style="top:8%;right:3%;transform:rotate(20deg)">🦴</div>
+  <div class="abg">
+    <div class="abi">
+      <img src="img/about.jpg" alt="Alejandra with dog in front of Royal Spaw van" loading="lazy">
+      <div class="abb"><div class="abn">7+</div><div class="abl">years of experience</div></div>
+    </div>
+    <div>
+      <div class="sl">About Alejandra &amp; her team</div>
+      <h2 class="st">Passionate about every dog we touch 🐾</h2>
+      <p class="ss">At Royal Spaw, we treat every dog like royalty. Our certified team brings a fully equipped, sanitized van straight to your driveway — giving your pup one-on-one care in a stress-free environment. No cages, no waiting rooms, just love and expert grooming.</p>
+      <div class="abf" style="margin-top:26px">
+        <div class="afi"><span class="afi-ic">🛡️</span><span>Fully licensed &amp; insured</span></div>
+        <div class="afi"><span class="afi-ic">🌿</span><span>Hypo-allergenic products</span></div>
+        <div class="afi"><span class="afi-ic">🚐</span><span>Sanitized between every visit</span></div>
+        <div class="afi"><span class="afi-ic">❄️</span><span>Climate-controlled van</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ REVIEWS CAROUSEL ═══ -->
+<section class="rv-sec" id="reviews">
+  <div class="paw-bg" style="top:10%;right:5%;opacity:.05">🐾</div>
+  <div class="paw-bg" style="bottom:8%;left:3%;opacity:.05;transform:rotate(-20deg)">🐾</div>
+  <div class="sc">
+    <div class="sl gold">What pet parents say</div>
+    <h2 class="st w">Dogs love us. Their owners trust us.</h2>
+    <p class="ss" style="color:rgba(255,255,255,.5);margin:0 auto">Real reviews from real Georgetown families.</p>
+  </div>
+  <div class="rv-stage" id="rvStage">
+    <div class="rv-track" id="rvTrack"></div>
+  </div>
+  <div class="rv-nav">
+    <button class="rv-btn" onclick="rvPrev()">‹</button>
+    <div class="rv-dots" id="rvDots"></div>
+    <button class="rv-btn" onclick="rvNext()">›</button>
+  </div>
+</section>
+
+<!-- ═══ BEFORE & AFTER ═══ -->
+<section class="bas" id="gallery">
+  <div class="paw-bg" style="top:5%;left:2%;opacity:.05">🐾</div>
+  <div class="paw-bg" style="bottom:5%;right:3%;opacity:.05;transform:rotate(10deg)">🐾</div>
+  <div class="sc">
+    <div class="sl gold">The transformation</div>
+    <h2 class="st w">Before &amp; after</h2>
+    <p class="ss" style="color:rgba(255,255,255,.5);margin:0 auto">Drag the handle to reveal the difference. Real dogs, real results.</p>
+  </div>
+  <div class="bag">
+    <!-- Slider 1 - Goldendoodle -->
+    <div class="bai">
+      <div class="basl" data-pos="50">
+        <div class="baim"><img src="img/gd_a.jpg" alt="Goldendoodle before"></div>
+        <div class="bac" style="width:50%"><img src="img/gd_d.jpg" alt="Goldendoodle after"></div>
+        <div class="bah" style="left:50%"></div>
+        <div class="bals"><span class="bpl bpb">Before</span><span class="bpl bpa">After ✨</span></div>
+      </div>
+      <div class="bainfo"><div class="badn">Biscuit</div><div class="badb">Goldendoodle · Full Groom</div></div>
+    </div>
+    <!-- Slider 2 - Shih Tzu -->
+    <div class="bai">
+      <div class="basl" data-pos="50">
+        <div class="baim"><img src="img/st_a.jpg" alt="Shih Tzu before"></div>
+        <div class="bac" style="width:50%"><img src="img/st_d.jpg" alt="Shih Tzu after"></div>
+        <div class="bah" style="left:50%"></div>
+        <div class="bals"><span class="bpl bpb">Before</span><span class="bpl bpa">After ✨</span></div>
+      </div>
+      <div class="bainfo"><div class="badn">Princess</div><div class="badb">Shih Tzu · Bath &amp; Tidy</div></div>
+    </div>
+    <!-- Slider 3 - Real client -->
+    <div class="bai">
+      <div class="basl" data-pos="50">
+        <div class="baim"><img src="img/real_b.jpg" alt="Client dog before"></div>
+        <div class="bac" style="width:50%"><img src="img/real_a.jpg" alt="Client dog after"></div>
+        <div class="bah" style="left:50%"></div>
+        <div class="bals"><span class="bpl bpb">Before</span><span class="bpl bpa">After ✨</span></div>
+      </div>
+      <div class="bainfo"><div class="badn">Charlie</div><div class="badb">Cavapoo · Full Groom · Real client</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SERVICES ═══ -->
+<section class="sec fi" id="services">
+  <div class="paw-bg" style="top:5%;right:2%;opacity:.06;transform:rotate(12deg)">🐾</div>
+  <div class="bone-bg" style="bottom:5%;left:1%;opacity:.05">🦴</div>
+  <div class="sc">
+    <div class="sl">What we offer</div>
+    <h2 class="st">Every dog gets<br>the royal treatment 👑</h2>
+    <p class="ss">All services in our sanitized, climate-controlled van — at your driveway.</p>
+  </div>
+  <div class="svg">
+    <div class="svc">
+      <div class="svci"><img src="img/svc_bath.jpg" alt="Bath service" loading="lazy"></div>
+      <div class="svbd">
+        <div class="svic">🛁</div>
+        <div class="svnm">Bath &amp; Tidy</div>
+        <ul class="svft">
+          <li>Massaging bath with premium shampoo</li>
+          <li>Nail trim &amp; file</li>
+          <li>Ear cleaning &amp; teeth brushing</li>
+          <li>Hand dry / blowout</li>
+          <li>Sanitary &amp; paw trim</li>
+        </ul>
+        <div class="svpr"><span class="svfr">From</span><span class="svpv">$75</span><span class="svpe">/ small dog</span></div>
+      </div>
+    </div>
+    <div class="svc" style="border-color:var(--g)">
+      <div class="svci"><img src="img/svc_full.jpg" alt="Full groom" loading="lazy"><div class="svcb">Most popular</div></div>
+      <div class="svbd">
+        <div class="svic">✂️</div>
+        <div class="svnm">Full Groom</div>
+        <ul class="svft">
+          <li>Everything in Bath &amp; Tidy</li>
+          <li>Full body haircut</li>
+          <li>Scissor &amp; style finish</li>
+          <li>Anal gland expression</li>
+          <li>Choice of bow or bandana</li>
+        </ul>
+        <div class="svpr"><span class="svfr">From</span><span class="svpv">$110</span><span class="svpe">/ small dog</span></div>
+      </div>
+    </div>
+    <div class="svc">
+      <div class="svci"><img src="img/van_back.jpg" alt="Puppy intro service" loading="lazy"></div>
+      <div class="svbd">
+        <div class="svic">🐶</div>
+        <div class="svnm">Puppy Intro</div>
+        <ul class="svft">
+          <li>Gentle soothing bath</li>
+          <li>Soft fluff dry</li>
+          <li>Nail tip if comfortable</li>
+          <li>Ear &amp; teeth introduction</li>
+          <li>Stress-free, positive experience</li>
+        </ul>
+        <div class="svpr"><span class="svfr">From</span><span class="svpv">$55</span><span class="svpe">/ all sizes</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ HOW IT WORKS ═══ -->
+<section class="sec hw fi">
+  <div class="paw-bg" style="top:50%;left:50%;transform:translate(-50%,-50%);font-size:200px;opacity:.03">🐾</div>
+  <div class="sc">
+    <div class="sl">Simple process</div>
+    <h2 class="st">How it works</h2>
+  </div>
+  <div class="hwr">
+    <div class="stp"><div class="stpc">1</div><div class="stpt">Book &amp; configure</div><p class="stpd">Pick service, dog size, preferred date — or let us fit you into a route near you.</p></div>
+    <div class="stp"><div class="stpc">2</div><div class="stpt">Get confirmed</div><p class="stpd">Instant SMS. Reminder 24h before your appointment.</p><div class="stpg">📍 Location shared day-of</div></div>
+    <div class="stp"><div class="stpc">3</div><div class="stpt">We come to you</div><p class="stpd">Our sanitized van arrives at your door. No drop-off. No stress.</p></div>
+    <div class="stp"><div class="stpc">4</div><div class="stpt">Pick up your star</div><p class="stpd">We notify you when ready and send a photo.</p><div class="stpg">📸 Photo sent to your phone</div></div>
+  </div>
+</section>
+
+<!-- ═══ BOOKING ═══ -->
+<section class="bks" id="booking">
+  <div class="paw-bg" style="top:5%;right:3%;opacity:.05">🐾</div>
+  <div class="paw-bg" style="bottom:5%;left:2%;opacity:.05;transform:rotate(-15deg)">🐾</div>
+  <div class="sc">
+    <div class="sl gold">Reserve your spot</div>
+    <h2 class="st w">Book your appointment 🐾</h2>
+    <p class="ss" style="color:rgba(255,255,255,.5);margin:0 auto">We confirm within 2 hours by SMS and email.</p>
+  </div>
+  <div class="bkc">
+    <div class="bkh">
+      <div><div class="bkht">🐾 Royal Spaw — Appointment</div><div class="bkhs" id="stLbl">Step 1 of 4 — Your dog's profile</div></div>
+      <div class="bkd" id="stDots"><div class="bkdt a"></div><div class="bkdt"></div><div class="bkdt"></div><div class="bkdt"></div></div>
+    </div>
+    <div class="bkbd">
+
+      <!-- STEP 1 -->
+      <div class="bkst v" id="s1">
+        <div class="sth"><div class="snb">1</div>Tell us about your dog 🐕</div>
+        <div class="fg">
+          <div class="ff"><label>Dog's name</label><input id="dName" placeholder="e.g. Biscuit"></div>
+          <div class="ff"><label>Breed</label><input id="dBreed" placeholder="e.g. Goldendoodle"></div>
+          <div class="ff"><label>Size / Weight</label>
+            <select id="dSize" onchange="uP()">
+              <option value="">Select size...</option>
+              <option value="small">Small — under 20 lbs</option>
+              <option value="medium">Medium — 20-50 lbs</option>
+              <option value="large">Large — 50-80 lbs</option>
+              <option value="xl">Extra large — 80+ lbs</option>
+            </select>
+          </div>
+          <div class="ff"><label>Coat type</label>
+            <select id="dCoat">
+              <option value="">Select coat...</option>
+              <option>Short / smooth</option><option>Medium length</option>
+              <option>Long / double coat</option><option>Curly / doodle</option>
+              <option>Matted — needs dematting</option>
+            </select>
+          </div>
+          <div class="ff"><label>Age</label>
+            <select id="dAge">
+              <option value="">Select...</option>
+              <option>Puppy — under 1 yr</option><option>Young — 1-3 yrs</option>
+              <option>Adult — 3-8 yrs</option><option>Senior — 8+ yrs</option>
+            </select>
+          </div>
+          <div class="ff"><label>Temperament</label>
+            <select id="dTemp">
+              <option value="">Select...</option>
+              <option>Calm &amp; friendly</option><option>A bit anxious</option>
+              <option>Reactive with strangers</option><option>Senior / special needs</option>
+            </select>
+          </div>
+          <div class="ff ffl"><label>Special notes (optional)</label>
+            <textarea id="dNotes" placeholder="Allergies, health conditions, grooming preferences, anything we should know..."></textarea>
+          </div>
+        </div>
+        <div class="bnv"><div></div><button class="bnx" onclick="go(2)">Continue — Select service →</button></div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="bkst" id="s2">
+        <div class="sth"><div class="snb">2</div>Service &amp; schedule</div>
+        <div class="fg" style="margin-bottom:18px">
+          <div class="ff"><label>Service</label>
+            <select id="svcT" onchange="uP()">
+              <option value="">Select service...</option>
+              <option value="bath">Bath &amp; Tidy</option>
+              <option value="full">Full Groom (most popular)</option>
+              <option value="puppy">Puppy Intro</option>
+            </select>
+          </div>
+          <div class="ff"><label>Your zip code</label>
+            <select id="zCode">
+              <option value="">Select area...</option>
+              <option>78628 — Georgetown</option><option>78665 — Round Rock</option>
+              <option>78613 — Cedar Park</option><option>78641 — Leander</option>
+              <option>78642 — Liberty Hill</option><option>76537 — Jarrell</option>
+              <option>Austin (north)</option>
+            </select>
+          </div>
+        </div>
+        <div class="sl" style="margin-bottom:9px;color:var(--n)">Scheduling preference</div>
+        <div class="rc">
+          <label class="ro sel" id="oE" onclick="sR('e')">
+            <input type="radio" name="rt" value="e" checked>
+            <div class="rot">📅 Choose my date &amp; time</div>
+            <div class="rod">Pick exactly when you want. Book at our full rate.</div>
+          </label>
+          <label class="ro" id="oR" onclick="sR('r')">
+            <input type="radio" name="rt" value="r">
+            <div class="rot">🗺️ Fit me into the route</div>
+            <div class="rod">We assign a slot near clients in your area — flexible timing, we propose ±1 day.</div>
+            <div class="rob">🏷️ Save 15%</div>
+          </label>
+        </div>
+        <div id="dpB"><div class="fg">
+          <div class="ff"><label>Preferred date</label><input type="date" id="pDate"></div>
+          <div class="ff"><label>Preferred time</label>
+            <select id="pTime"><option value="">Select window...</option>
+              <option>Morning (8am–12pm)</option><option>Afternoon (12pm–4pm)</option>
+              <option>Late afternoon (4pm–6pm)</option>
+            </select>
+          </div>
+        </div></div>
+        <div id="rtB" style="display:none"><div class="fg">
+          <div class="ff"><label>Preferred week</label><input type="week" id="pWk"></div>
+          <div class="ff"><label>Best time of day</label>
+            <select><option>Any time works</option><option>Morning preferred</option><option>Afternoon preferred</option></select>
+          </div>
+        </div>
+        <p style="font-size:12px;color:var(--mu);margin-top:7px">We'll contact you within 24h to confirm the exact slot. 🐾</p></div>
+        <div class="bnv"><button class="bbk" onclick="go(1)">← Back</button><button class="bnx" onclick="go(3)">Continue — Add-ons →</button></div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="bkst" id="s3">
+        <div class="sth"><div class="snb">3</div>Add-ons &amp; pricing ✨</div>
+        <div class="sl" style="margin-bottom:9px;color:var(--n)">Optional add-ons</div>
+        <div class="aog">
+          <label class="aoi" onclick="tA(this,15)"><input type="checkbox"><span class="aon">🌸 Nail painting</span><span class="aop">+$15</span></label>
+          <label class="aoi" onclick="tA(this,18)"><input type="checkbox"><span class="aon">🌾 Oatmeal sensitive shampoo</span><span class="aop">+$18</span></label>
+          <label class="aoi" onclick="tA(this,25)"><input type="checkbox"><span class="aon">✨ Keratin treatment</span><span class="aop">+$25</span></label>
+          <label class="aoi" onclick="tA(this,20)"><input type="checkbox"><span class="aon">🫐 Berry silk conditioner</span><span class="aop">+$20</span></label>
+          <label class="aoi" onclick="tA(this,22)"><input type="checkbox"><span class="aon">🐛 Flea &amp; tick relief</span><span class="aop">+$22</span></label>
+          <label class="aoi" onclick="tA(this,35)"><input type="checkbox"><span class="aon">🐕 De-shed service</span><span class="aop">+$35</span></label>
+          <label class="aoi" onclick="tA(this,15)"><input type="checkbox"><span class="aon">🤍 Tear stain remover</span><span class="aop">+$15</span></label>
+          <label class="aoi" onclick="tA(this,12)"><input type="checkbox"><span class="aon">🐾 Paw massage &amp; moisturizer</span><span class="aop">+$12</span></label>
+        </div>
+        <div class="prs">
+          <div class="prr"><span>Base service</span><span id="bP">Select in step 2</span></div>
+          <div class="prr" id="dR" style="display:none;color:#86efac"><span>Route flex (15% off)</span><span id="dA">-$0</span></div>
+          <div class="prr" id="aR" style="display:none"><span>Add-ons</span><span id="aT">$0</span></div>
+          <div class="prr tot"><span>Estimated total</span><span class="prv" id="tP">—</span></div>
+          <div class="prn">Final price confirmed at booking based on coat condition. No deposit required. 🐾</div>
+        </div>
+        <div class="bnv"><button class="bbk" onclick="go(2)">← Back</button><button class="bnx" onclick="go(4)">Continue — Health &amp; waiver →</button></div>
+      </div>
+
+      <!-- STEP 4 -->
+      <div class="bkst" id="s4">
+        <div class="sth"><div class="snb">4</div>Health, waiver &amp; contact</div>
+        <div class="sl" style="margin-bottom:9px;color:var(--n)">Vaccinations 💉</div>
+        <div class="vxr">
+          <label class="vxi" onclick="this.classList.toggle('sel')"><input type="checkbox"> Rabies</label>
+          <label class="vxi" onclick="this.classList.toggle('sel')"><input type="checkbox"> Bordetella</label>
+          <label class="vxi" onclick="this.classList.toggle('sel')"><input type="checkbox"> DHPP / combo</label>
+          <label class="vxi" onclick="this.classList.toggle('sel')"><input type="checkbox"> Leptospirosis</label>
+          <label class="vxi" onclick="this.classList.toggle('sel')"><input type="checkbox"> Lyme</label>
+          <div class="ff" style="margin:0"><label>Vet name / last visit</label><input placeholder="Dr. Smith / June 2025"></div>
+        </div>
+        <div class="fg" style="margin-bottom:18px">
+          <div class="ff"><label>Your name</label><input id="oName" placeholder="Full name"></div>
+          <div class="ff"><label>Phone</label><input type="tel" id="oPhone" placeholder="(512) 000-0000"></div>
+          <div class="ff"><label>Email</label><input type="email" id="oEmail" placeholder="you@email.com"></div>
+          <div class="ff"><label>Service address</label><input id="oAddr" placeholder="123 Main St, Georgetown TX 78628"></div>
+        </div>
+        <div class="sl" style="margin-bottom:7px;color:var(--n)">Service agreement &amp; liability waiver</div>
+        <div class="wbx"><p>By submitting this request, I confirm: (1) My dog is current on all required Texas vaccinations including rabies. (2) I authorize Royal Spaw Mobile Grooming to perform the requested services. (3) I acknowledge grooming may reveal pre-existing conditions; Royal Spaw is not responsible for these. (4) I agree to disclose all behavioral issues, allergies, health conditions, or medications. (5) I will ensure a safe, accessible environment for the van. (6) Cancellations require 24-hour advance notice. No-shows may incur a fee. (7) I consent to Royal Spaw photographing my pet for documentation and potential marketing (revocable in writing). (8) Royal Spaw is not liable for injuries arising from undisclosed pre-existing conditions or aggressive behavior unknown at booking.</p></div>
+        <label class="wck"><input type="checkbox" id="wChk"><span>I have read and agree to the service agreement and liability waiver.</span></label>
+        <div class="bnv"><button class="bbk" onclick="go(3)">← Back</button><button class="bnx gld" onclick="sub()">🐾 Submit appointment request →</button></div>
+      </div>
+
+      <!-- CONFIRM -->
+      <div class="bkst" id="sCf">
+        <div class="cfb">
+          <div class="cfi">🐾</div>
+          <div class="cft">Request received, <span id="cfN">friend</span>!</div>
+          <p class="cfs">We'll confirm your appointment within <strong>2 hours</strong> by SMS and email.<br>If you chose the route option, we'll propose the best slot for <span id="cfD">your pup</span>.<br><br>Thank you for choosing Royal Spaw! We can't wait to pamper your dog 🐶💕</p>
+          <a href="#" style="display:inline-block;margin-top:22px;background:linear-gradient(135deg,var(--g),var(--g2));color:var(--n);padding:12px 28px;border-radius:var(--rp);font-size:14px;font-weight:500;text-decoration:none">← Return to home</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ AREAS ═══ -->
+<section class="sec fi" id="areas">
+  <div class="bone-bg" style="top:5%;right:2%;transform:rotate(15deg)">🦴</div>
+  <div class="sc">
+    <div class="sl">Coverage</div>
+    <h2 class="st">We come to your neighborhood 📍</h2>
+  </div>
+  <div class="arg">
+    <div class="arc"><div class="are">🏠</div><div class="arn">Georgetown</div><div class="ard">Home base</div><div class="arz">78628 · 78626</div></div>
+    <div class="arc"><div class="are">📍</div><div class="arn">Round Rock</div><div class="ard">~15 min</div><div class="arz">78665 · 78681</div></div>
+    <div class="arc"><div class="are">📍</div><div class="arn">Cedar Park</div><div class="ard">~20 min</div><div class="arz">78613</div></div>
+    <div class="arc"><div class="are">📍</div><div class="arn">Leander</div><div class="ard">~25 min</div><div class="arz">78641</div></div>
+    <div class="arc"><div class="are">📍</div><div class="arn">Liberty Hill</div><div class="ard">~30 min</div><div class="arz">78642</div></div>
+    <div class="arc"><div class="are">📍</div><div class="arn">Jarrell</div><div class="ard">~20 min</div><div class="arz">76537</div></div>
+    <div class="arc"><div class="are">📍</div><div class="arn">Austin</div><div class="ard">~35 min</div><div class="arz">North Austin</div></div>
+    <div class="arc" style="border-style:dashed"><div class="are">❓</div><div class="arn">Not listed?</div><div class="ard" style="color:var(--mu)">Call us!</div><div class="arz">512-316-6495</div></div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="sec fqs fi">
+  <div class="paw-bg" style="top:50%;right:2%;transform:translateY(-50%) rotate(10deg)">🐾</div>
+  <div class="sc">
+    <div class="sl">Questions</div>
+    <h2 class="st">Everything you need to know 🐾</h2>
+  </div>
+  <div class="fql">
+    <div class="fqi"><div class="fqq">What is mobile grooming and why is it better?</div><div class="fqa"><p>Mobile grooming brings a fully equipped salon right to your driveway. Your dog gets one-on-one attention with no other animals, no cage, and no stressful waiting room. Especially wonderful for anxious, senior, or reactive dogs — they stay calm in familiar surroundings and get home faster. 🐾</p></div></div>
+    <div class="fqi"><div class="fqq">How do I know when the van is arriving?</div><div class="fqa"><p>You'll receive an SMS confirmation when you book, a reminder 24 hours before, and a day-of message with a live location link when Alejandra is on her way. No more guessing!</p></div></div>
+    <div class="fqi"><div class="fqq">What is the "route flex" option and how do I save 15%?</div><div class="fqa"><p>When we're already serving dogs in your neighborhood, we can fit you in at a 15% discount. You give us a preferred week and we confirm the exact time within 24 hours — usually within ±1 day. It's the best option if you're flexible and want to save! 🏷️</p></div></div>
+    <div class="fqi"><div class="fqq">Does my dog need to be vaccinated?</div><div class="fqa"><p>Yes — all dogs must be current on their rabies vaccination at minimum, as required by Texas law. We ask you to confirm vaccine status in the booking form for the safety of your dog, our team, and all the other pets we serve.</p></div></div>
+    <div class="fqi"><div class="fqq">Can I watch while my dog is being groomed?</div><div class="fqa"><p>We ask owners to wait inside during the appointment. Sudden voices or movement can startle dogs at inconvenient moments. Don't worry — we'll send you a beautiful photo when your pup is done! 📸💕</p></div></div>
+    <div class="fqi"><div class="fqq">Do you groom puppies?</div><div class="fqa"><p>Absolutely! Our Puppy Intro is designed to make grooming a positive, stress-free first experience. We go at the puppy's pace — no rushing, no stress. Starting them right makes every future session so much easier. 🐶</p></div></div>
+  </div>
+</section>
+
+<!-- ═══ CTA ═══ -->
+<section class="ctas fi">
+  <div class="paw-bg" style="top:10%;left:3%;color:#1a1a2e">🐾</div>
+  <div class="paw-bg" style="bottom:10%;right:3%;color:#1a1a2e;transform:rotate(15deg)">🐾</div>
+  <div class="bone-bg" style="top:50%;left:50%;transform:translate(-50%,-50%);font-size:300px;color:#1a1a2e">🦴</div>
+  <div style="position:relative;z-index:1">
+    <div class="sl" style="color:rgba(26,26,46,.5)">Ready? 🐾</div>
+    <h2 class="st">Your dog deserves<br>the royal treatment 👑</h2>
+    <p class="ss">Weekend slots fill fast. Book today and give your pup the stress-free grooming they deserve.</p>
+    <div class="ctab" style="margin-top:28px">
+      <a href="#booking" class="ctbn">📅 Book my appointment</a>
+      <a href="tel:5123166495" class="ctbo">📞 (512) 316-6495</a>
+    </div>
+    <p style="font-size:12px;color:rgba(26,26,46,.45);margin-top:18px">No deposit required · Same-week availability · Georgetown, Round Rock, Cedar Park &amp; more 🐾</p>
+  </div>
+</section>
+
+<!-- ═══ FOOTER ═══ -->
+<footer>
+  <div class="paw-bg" style="top:10%;right:3%;opacity:.04">🐾</div>
+  <div class="ftop">
+    <div>
+      <a href="#" class="logo-w">
+        <img src="img/logo.jpg" alt="Royal Spaw" style="width:52px;height:52px;border-radius:50%;object-fit:cover;border:2px solid var(--g)">
+        <div class="logo-t"><span class="logo-m">Royal Spaw</span><span class="logo-s">Mobile Grooming</span></div>
+      </a>
+      <p class="fdsc">Professional mobile dog grooming in Georgetown, Round Rock, Cedar Park, Leander, Liberty Hill, Jarrell &amp; Austin TX. While you live your life, we pamper your pup. 🐾</p>
+    </div>
+    <div class="fc"><h4>Services</h4><a href="#services">Full Groom</a><a href="#services">Bath &amp; Tidy</a><a href="#services">Puppy Intro</a><a href="#services">Add-ons</a></div>
+    <div class="fc"><h4>Areas</h4><a href="#areas">Georgetown</a><a href="#areas">Round Rock</a><a href="#areas">Cedar Park</a><a href="#areas">Leander &amp; more</a></div>
+    <div class="fc"><h4>Contact</h4><a href="tel:5123166495">(512) 316-6495</a><a href="mailto:royalspawmg@gmail.com">royalspawmg@gmail.com</a><a href="https://www.instagram.com/royalspawmg">Instagram</a><a href="https://www.royalspawmg.com/hiring-mobile-dog-groomers/">We're Hiring 🐾</a></div>
+  </div>
+  <div class="fbot">
+    <p>© 2026 Royal Spaw Mobile Grooming · Georgetown TX · All Rights Reserved 🐾</p>
+    <div style="display:flex;gap:18px"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+  </div>
+</footer>
+
+<script>
+// NAV
+var nav=document.getElementById('mainNav');
+window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>55)});
+document.getElementById('hamBtn').addEventListener('click',function(){document.getElementById('mm').classList.add('open')});
+function closeMM(){document.getElementById('mm').classList.remove('open')}
+
+// SCROLL FADE
+var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)x.target.classList.add('in')})},{threshold:.1});
+document.querySelectorAll('.fi').forEach(function(el){io.observe(el)});
+
+// BEFORE/AFTER SLIDERS
+document.querySelectorAll('.basl').forEach(function(sl){
+  var h=sl.querySelector('.bah'),c=sl.querySelector('.bac'),act=false;
+  function sp(x){var r=sl.getBoundingClientRect();var p=Math.min(Math.max((x-r.left)/r.width*100,2),98);h.style.left=p+'%';c.style.width=p+'%'}
+  h.addEventListener('mousedown',function(e){act=true;e.preventDefault()});
+  window.addEventListener('mousemove',function(e){if(act)sp(e.clientX)});
+  window.addEventListener('mouseup',function(){act=false});
+  sl.addEventListener('touchstart',function(){act=true},{passive:true});
+  window.addEventListener('touchmove',function(e){if(act)sp(e.touches[0].clientX)},{passive:true});
+  window.addEventListener('touchend',function(){act=false});
+  sl.addEventListener('click',function(e){sp(e.clientX)});
+});
+
+// REVIEWS 3D CAROUSEL
+var reviews=[
+  {st:'★★★★★',tx:'"Luna came back looking like a show dog. Alejandra is so gentle with anxious dogs. We will never go back to a salon."',nm:'Sarah M.',loc:'Georgetown · 3 days ago',av:'SM',ac:'#fdf6ee',tc:'#c8864a'},
+  {st:'★★★★★',tx:'"Easy booking, showed up exactly on time. Max has never been less anxious. The convenience alone is worth every penny."',nm:'James R.',loc:'Round Rock · 1 week ago',av:'JR',ac:'#dbeafe',tc:'#1e40af'},
+  {st:'★★★★★',tx:'"Rosie gets so anxious at salons. Royal Spaw changed everything — she was calm the entire time. I\'m a convert for life!"',nm:'Maria K.',loc:'Cedar Park · 2 weeks ago',av:'MK',ac:'#d1fae5',tc:'#065f46'},
+  {st:'★★★★★',tx:'"The after-photo Alejandra sent made my day. My golden retriever looked absolutely regal. Highly recommend to every dog owner!"',nm:'Patricia L.',loc:'Leander · 3 weeks ago',av:'PL',ac:'#fde8e8',tc:'#9b1c1c'},
+  {st:'★★★★★',tx:'"Scheduled online in under 2 minutes. They were at my door exactly on time. My Shih Tzu has never looked better. Truly royal!"',nm:'David C.',loc:'Georgetown · 1 month ago',av:'DC',ac:'#e8f4e8',tc:'#166534'},
+  {st:'★★★★★',tx:'"Best investment for my pup. No more stressful vet-style trips to groomers. Biscuit comes out happy every single time. 10/10."',nm:'Amanda T.',loc:'Liberty Hill · 1 month ago',av:'AT',ac:'#f0e8ff',tc:'#6b21a8'},
+  {st:'★★★★★',tx:'"Alejandra is amazing with my senior dog. So patient, so gentle. Worth every dollar and more. We are clients for life!"',nm:'Robert V.',loc:'Round Rock · 6 weeks ago',av:'RV',ac:'#fff3e0',tc:'#92400e'},
+  {st:'★★★★★',tx:'"The van shows up, the magic happens, they send you a photo of your beautiful dog — it\'s honestly the best service we\'ve used."',nm:'Christine M.',loc:'Cedar Park · 2 months ago',av:'CM',ac:'#e0f2fe',tc:'#075985'},
+];
+var ri=0,autoT,isMobile=window.innerWidth<=768;
+
+function rvBuild(){
+  var track=document.getElementById('rvTrack');
+  var dots=document.getElementById('rvDots');
+  track.innerHTML='';dots.innerHTML='';
+  if(isMobile){
+    var card=document.createElement('div');
+    card.className='rv-card';
+    card.style.cssText='position:relative;width:100%;left:0;top:0;transform:none;opacity:1;';
+    card.innerHTML=rvHTML(reviews[ri]);
+    track.appendChild(card);
+  } else {
+    var positions=[-2,-1,0,1,2];
+    positions.forEach(function(p){
+      var idx=(ri+p+reviews.length)%reviews.length;
+      var card=document.createElement('div');
+      card.className='rv-card';
+      var scale=p===0?1:p===1||p===-1?.82:.65;
+      var tx=p*360;
+      var tz=p===0?0:-120;
+      var op=p===0?1:Math.abs(p)===1?.65:.35;
+      var zi=p===0?10:Math.abs(p)===1?5:1;
+      card.style.cssText='left:50%;margin-left:-170px;transform:translateX('+tx+'px) scale('+scale+') translateZ('+tz+'px);opacity:'+op+';z-index:'+zi+';';
+      card.innerHTML=rvHTML(reviews[idx]);
+      if(p!==0)card.addEventListener('click',function(){var diff=p;ri=(ri+diff+reviews.length)%reviews.length;rvBuild()});
+      track.appendChild(card);
+    });
+  }
+  reviews.forEach(function(_,i){
+    var d=document.createElement('div');
+    d.className='rv-dot'+(i===ri?' a':'');
+    d.addEventListener('click',function(){ri=i;rvBuild()});
+    dots.appendChild(d);
+  });
+}
+function rvHTML(r){
+  return '<div class="rv-st">'+r.st+'</div><p class="rv-tx">'+r.tx+'</p><div class="rv-au"><div class="rv-av" style="background:'+r.ac+';color:'+r.tc+'">'+r.av+'</div><div><div class="rv-nm">'+r.nm+'</div><div class="rv-mt"><div class="gbg">G</div>Google · '+r.loc+'</div></div></div>';
+}
+function rvNext(){ri=(ri+1)%reviews.length;rvBuild()}
+function rvPrev(){ri=(ri-1+reviews.length)%reviews.length;rvBuild()}
+rvBuild();
+setInterval(function(){if(!document.hidden)rvNext()},4500);
+window.addEventListener('resize',function(){isMobile=window.innerWidth<=768;rvBuild()});
+
+// FAQ
+document.querySelectorAll('.fqq').forEach(function(q){q.addEventListener('click',function(){
+  var it=q.parentElement;
+  document.querySelectorAll('.fqi').forEach(function(i){if(i!==it)i.classList.remove('open')});
+  it.classList.toggle('open')})
+});
+
+// BOOKING
+var cs=1,rm='e',at=0;
+var bp={small:{bath:75,full:110,puppy:55},medium:{bath:110,full:150,puppy:70},large:{bath:140,full:190,puppy:85},xl:{bath:175,full:235,puppy:100}};
+var sl=['','Step 1 of 4 — Your dog\'s profile','Step 2 of 4 — Service & schedule','Step 3 of 4 — Add-ons & pricing','Step 4 of 4 — Health & waiver'];
+function go(n){
+  if(n===2){if(!document.getElementById('dName').value||!document.getElementById('dSize').value){alert('Please fill in your dog\'s name and size to continue. 🐾');return;}}
+  document.getElementById('s'+cs).classList.remove('v');cs=n;
+  var el=document.getElementById(n==='cf'?'sCf':'s'+n);if(el)el.classList.add('v');
+  document.getElementById('stLbl').textContent=sl[n]||'';
+  document.querySelectorAll('.bkdt').forEach(function(d,i){d.classList.toggle('a',i<n)});
+  uP();document.querySelector('.bkc').scrollIntoView({behavior:'smooth',block:'start'});
+}
+function sR(m){
+  rm=m;
+  document.getElementById('oE').classList.toggle('sel',m==='e');
+  document.getElementById('oR').classList.toggle('sel',m==='r');
+  document.getElementById('dpB').style.display=m==='e'?'':'none';
+  document.getElementById('rtB').style.display=m==='r'?'':'none';
+  uP();
+}
+function uP(){
+  var sz=document.getElementById('dSize').value;
+  var sv=document.getElementById('svcT')?document.getElementById('svcT').value:'';
+  if(!sz||!sv){document.getElementById('bP').textContent='Select in step 2';document.getElementById('tP').textContent='—';return;}
+  var b=(bp[sz]&&bp[sz][sv])||0;
+  var d=rm==='r'?Math.round(b*.15):0;var t=b-d+at;
+  document.getElementById('bP').textContent='$'+b;
+  document.getElementById('dR').style.display=d?'flex':'none';
+  document.getElementById('dA').textContent='-$'+d;
+  document.getElementById('aR').style.display=at?'flex':'none';
+  document.getElementById('aT').textContent='$'+at;
+  document.getElementById('tP').textContent=b?('$'+t+' est.'):'—';
+}
+function tA(el,p){el.classList.toggle('sel');at+=el.classList.contains('sel')?p:-p;uP()}
+function sub(){
+  if(!document.getElementById('wChk').checked){alert('Please read and agree to the service agreement. 🐾');return;}
+  var nm=document.getElementById('oName').value,ph=document.getElementById('oPhone').value;
+  if(!nm||!ph){alert('Please provide your name and phone number.');return;}
+  document.getElementById('cfN').textContent=nm.split(' ')[0];
+  document.getElementById('cfD').textContent=document.getElementById('dName').value||'your pup';
+  document.getElementById('s4').classList.remove('v');
+  document.getElementById('sCf').classList.add('v');
+  document.getElementById('stLbl').textContent='Appointment requested! 🐾';
+  document.querySelectorAll('.bkdt').forEach(function(d){d.classList.add('a')});
+}
+</script>
+</body>
+</html>
